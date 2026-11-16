@@ -1,0 +1,25 @@
+/*reglas generales*/
+
+/*Media Query*/
+
+/** Reescribir colores */
+
+/** Productos */
+
+.muebles{
+    color: #037BC0;
+}
+
+ul li {
+    display: inline-block;
+}
+
+
+.playfair-parrafo {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
