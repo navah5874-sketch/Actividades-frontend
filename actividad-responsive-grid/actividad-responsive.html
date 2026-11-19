@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(5, auto);
+            gap: 4px;
+
+            height: 100vh;
+        }
+
+        header, 
+        section#titulo,
+        footer, aside{
+            height: 85px;
+        }
+
+        header, aside, section#titulo, .secciones, article, footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: white;
+        }
+
+        header{
+            background-color:  green;
+        }
+
+        aside{
+            background-color: red;
+
+        }
+
+        section#titulo{
+            background-color: purple;
+        }
+
+        .secciones{
+            background-color: coral;
+            grid-column: span 1;
+            height: 200px;
+        }
+
+                #articulos{
+            display: flex;
+            flex-wrap: wrap;
+                }
+        
+
+        article{
+            background-color: blue;
+            flex-basis: 50%;
+            height: 160px;
+            border: solid 2px #fff;
+        }
+
+        footer{
+            background-color: green;
+        }
+
+        /* Media queri para escritorio */
+        @media (min-width: 700px){
+
+        body{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, auto);
+            gap: 4px;
+
+            /* height: 100vh; */
+        }
+
+        header, aside, section#titulo, .secciones, article, footer{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 700;
+            color: white;
+
+        }
+
+        header {
+            background-color: green;
+            /* grid-column-start: 1;
+            grid-column-end: 4; */
+
+            grid-column: 1 / 4;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside{
+            background-color: red;
+
+            /* grid-row-start: 2;
+            grid-row-end: 5; */
+
+            grid-row: 2 / 5;
+
+            height: auto;
+
+        }
+
+        section#titulo{
+            background-color: purple;
+
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+
+        .secciones{
+            background-color: coral;
+            grid-column: span 1;
+            height: 200px;
+        }
+        
+        
+        #articulos{
+            grid-column-start: 2;
+            grid-column-end: 4;
+            display: flex;
+            flex-wrap: wrap;
+
+            /* gap: 2px; */
+        }
+        
+        article{
+            background-color: blue;
+            flex-basis: 20%;
+            height: 160px;
+            border: solid 2px #fff;
+        }
+
+        footer{
+            background-color: green;
+            grid-column: 1 / 4;
+
+        }
+
+        header, 
+        section#titulo,
+        footer{
+            height: 85px;
+        }
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        HEADER
+    </header>
+
+    <aside>
+        ASIDE
+    </aside>
+
+    <section id="titulo">
+        TITULO
+    </section>
+
+    <section class="secciones sec-1"> SECTION 1</section>
+    <section class="secciones sec-2">SECTION 2</section>
+
+    <div id="articulos">
+        <article>Articulo 1</article>
+        <article>Articulo 2</article>
+        <article>Articulo 3</article>
+        <article>Articulo 4</article>
+        <article>Articulo 5</article>
+        <article>Articulo 6</article>
+        <article>Articulo 7</article>
+        <article>Articulo 8</article>
+        <article>Articulo 9</article>
+        <article>Articulo 10</article>
+    </div>
+
+    <footer>
+        FOOTER
+    </footer>
+</body>
+</html>

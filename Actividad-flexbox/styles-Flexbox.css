@@ -247,3 +247,8 @@ nav.links ul{
 nav.links ul{
     height: 100%;
 }
+
+nav.links ul li a:hover {
+    color: #9867C5;
+    border-bottom: solid 2px #9867C5;
+}
